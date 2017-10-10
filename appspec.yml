@@ -3,3 +3,9 @@ os: linux
 files:
    - source: /
      destination: /home/ec2-user/test
+
+hooks:
+
+   AfterInstall:
+    - location: deploy-scripts/start-docker.sh
+      runas: ec2-user

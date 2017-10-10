@@ -1,0 +1,34 @@
+php:
+  build: ./docker-build/php    
+  #image: php:7-fpm
+  volumes:
+    - ./html:/html
+  links:
+    - mysql
+  env_file:
+    - ./env/php.env
+
+web:
+  image: nginx:latest
+  ports:
+  - "8080:80"
+  volumes:
+  - ./html:/html
+  - ./site.conf:/etc/nginx/conf.d/site.conf
+  links:
+    - php
+      
+mysql:
+  image: mariadb
+  env_file:
+    - ./env/mysql.env
+
+phpmyadmin:
+  image: phpmyadmin/phpmyadmin
+  links: 
+    - mysql
+  ports:
+    - 8183:80
+  env_file:
+    - ./env/phpmyadmin.env
+
