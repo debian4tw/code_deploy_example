@@ -11,7 +11,7 @@ php:
 web:
   image: nginx:latest
   ports:
-  - "8080:80"
+  - "80:80"
   volumes:
   - ./html:/html
   - ./site.conf:/etc/nginx/conf.d/site.conf
