@@ -18,6 +18,6 @@ if (!$conn) {
 echo "Connected successfully";
 
 ?>  
-  <?php echo phpinfo();?>
+  <?php //echo phpinfo();?>
 </body>
 </html>
