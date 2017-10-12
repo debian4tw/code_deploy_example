@@ -5,7 +5,7 @@ files:
      destination: /home/ec2-user/test
 
 hooks:
-   BeforeInstall:
+   DownloadBundle:
     - location: deploy-scripts/install-compose.sh
       runas: root
 
