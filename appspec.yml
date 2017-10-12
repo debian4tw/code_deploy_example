@@ -9,3 +9,7 @@ hooks:
    AfterInstall:
     - location: deploy-scripts/start-docker.sh
       runas: ec2-user
+  
+  ApplicationStop:
+    - location: deploy-scripts/stop-docker.sh
+      runas: ec2-user
