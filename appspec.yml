@@ -1,10 +1,14 @@
-version: 0.1
+version: 0.2
 os: linux
 files:
    - source: /
      destination: /home/ec2-user/test
 
 hooks:
+   BeforeInstall:
+    - location: deploy-scripts/install-compose.sh
+      runas: root
+
    AfterInstall:
     - location: deploy-scripts/start-docker.sh
       runas: root
