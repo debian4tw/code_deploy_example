@@ -13,6 +13,6 @@ hooks:
     - location: deploy-scripts/start-docker.sh
       runas: root
   
-   ApplicationStop:
-    - location: deploy-scripts/stop-docker.sh
-      runas: root
+   #ApplicationStop:
+   # - location: deploy-scripts/stop-docker.sh
+   #   runas: root
