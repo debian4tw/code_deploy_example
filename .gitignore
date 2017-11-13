@@ -1,0 +1,5 @@
+env/mysql.env
+env/php.env
+env/phpmyadmin.env
+
+app/node_modules
